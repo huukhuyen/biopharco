@@ -1,0 +1,221 @@
+.content {
+    .section-slide {
+        @extend %clearfix;
+        img {
+            max-height: 440px;
+            width: 100%;
+        }
+        .img-banner {
+            border-left: 4px solid $color-2;
+            border-right: 4px solid $color-2;
+        }
+        .control-slide {
+            span {
+                position: absolute;
+                top: 45%;
+                &.fa {
+                    padding: 5px 15px;
+                    background: $color-5;
+                }
+            }
+            .right {
+                span {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+        .carousel-control {}
+    }
+    .section-about {
+        @extend %clearfix;
+        padding: 20px 0;
+        background: $color-3;
+        h1 {
+            font-size: 20px;
+            color: $color-1;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 0 2px 1px #939393;
+        }
+        p {
+            text-align: justify;
+            line-height: 28px;
+        }
+    }
+    .section-products {
+        @extend %clearfix;
+        .category-pr-h2 {
+            border-bottom: 1px solid $color-a;
+            color: $color-a;
+            padding: 10px 8px;
+            background: $color-1;
+            text-transform: uppercase;
+        }
+        .list-pr {
+            li {
+                &.active {
+                    padding: 10px 8px;
+                    background: $color-4;
+                    color: $color-a;
+                }
+                cursor: pointer;
+                padding: 10px 0;
+                color: $color-o;
+                &:hover {
+                    @include transition(400ms);
+                    padding: 10px 8px;
+                    background: $color-4;
+                    color: $color-a;
+                }
+            }
+        }
+        .list-product {
+            img {
+                border: 1px solid $color-5;
+            }
+        }
+    }
+    .section-banner {
+        @extend %clearfix;
+        margin: 10px 0;
+        background: $color-3;
+        img {
+            width: 50%;
+            float: left;
+        }
+    }
+    .section-news {
+        img {
+            border: 1px solid $color-5;
+        }
+        .date-news {
+            font-style: italic;
+            color: $color-1;
+            font-size: 12px;
+            padding: 5px 0;
+        }
+        .name-news {
+            font-size: 14px;
+            padding: 10px 0;
+        }
+        .news-more {
+            padding-bottom: 20px;
+            color: $color-4;
+            text-align: center;
+        }
+    }
+    .section-nav-bottom {
+        background: $color-3;
+        padding: 15px 0;
+        p {
+            text-align: right;
+        }
+    }
+}
+@include mobile {
+    .header {
+        background: $color-a;
+        .header-right {
+            width: 100%;
+            text-align: center;
+            .form-search {
+                text-align: center;
+                width: 100%;
+                margin: 10px 0;
+                input {
+                    width: 250px;
+                }
+            }
+            .language {
+                margin: 10px auto;
+            }
+        }
+    }
+    .nav {
+        .toggle-menu {
+            color: $color-a;
+            padding: 10px;
+            cursor: pointer;
+            display: block;
+        }
+        .content-nav {
+            display: none;
+            li {
+                width: 100%;
+                a {
+                    display: block;
+                }
+                .sub {
+                    display: block;
+                    position: relative;
+                    z-index: 10;
+                    background: $color-1;
+                    li {
+                        display: none;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        .section-banner {
+            img {
+                width: 100%;
+            }
+        }
+    }
+};
+@include tablet {
+    .header {
+        .header-right {
+            .language {
+                text-align: right;
+            }
+        }
+    }
+    .nav {
+        .toggle-menu {
+            color: $color-a;
+            padding: 10px;
+            cursor: pointer;
+            display: block;
+        }
+        .content-nav {
+            display: none;
+            li {
+                width: 50%;
+                a {
+                    display: block;
+                }
+                .sub {
+                    display: block;
+                    position: relative;
+                    z-index: 10;
+                    background: $color-1;
+                    li {
+                        display: none;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+};
+@include desktop {
+    .nav {
+        .toggle-menu {
+            display: none;
+        }
+        #cssmenu > ul > li.has-sub > a:after {
+            background: $color-k;
+        }
+        #cssmenu > ul > li.has-sub > a:before {
+            background: $color-k;
+        }
+        .content-nav {
+            display: block!important;
+        }
+    }
+};
