@@ -196,25 +196,25 @@ button:focus, input:focus, a:focus, .btn:focus {
   position: relative;
 }
 
-.nav .content-nav li {
+.nav .content-nav > li {
   text-transform: uppercase;
   border: 2px solid transparent !important;
   float: left;
 }
 
-.nav .content-nav li a {
+.nav .content-nav > li a {
   font-family: 'iCielEffra';
   display: block;
   color: #ffffff;
   padding: 20px;
 }
 
-.nav .content-nav li.active {
+.nav .content-nav > li.active {
   border: 2px solid #ffffff !important;
   background: #40abd9;
 }
 
-.nav .content-nav li:hover {
+.nav .content-nav > li:hover {
   border: 2px solid #ffffff !important;
   background: #40abd9;
   -webkit-transition: 600ms;
@@ -296,7 +296,7 @@ button:focus, input:focus, a:focus, .btn:focus {
   width: 8px;
   height: 2px;
   display: block;
-  background: #ffffff;
+  background: transparent;
   content: '';
 }
 
@@ -308,11 +308,10 @@ button:focus, input:focus, a:focus, .btn:focus {
   width: 2px;
   height: 8px;
   content: '';
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  -webkit-transition: 400ms ease;
+  -moz-transition: 400ms ease;
+  -o-transition: 400ms ease;
+  transition: 400ms ease;
 }
 
 #cssmenu > ul > li.has-sub:hover > a:before {
@@ -331,19 +330,19 @@ button:focus, input:focus, a:focus, .btn:focus {
 
 #cssmenu ul ul li {
   height: 0;
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  -webkit-transition: 400ms ease;
+  -moz-transition: 400ms ease;
+  -o-transition: 400ms ease;
+  transition: 400ms ease;
 }
 
 #cssmenu li:hover > ul {
-  left: auto;
+  left: -2px;
+  border-top: 4px solid transparent;
 }
 
 #cssmenu.align-right li:hover > ul {
-  left: auto;
+  left: -2px;
   right: 0;
 }
 
@@ -366,17 +365,18 @@ button:focus, input:focus, a:focus, .btn:focus {
   padding: 12px 15px;
   width: 170px;
   color: #ffffff;
-  background: #40abd9;
-}
-
-#cssmenu ul ul li.last-item > a,
-#cssmenu ul ul li:last-child > a {
-  border-bottom: 0;
+  background: #3ba820;
 }
 
 #cssmenu ul ul li a:hover,
 #cssmenu ul ul li:hover > a {
-  color: #ffffff;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -o-transition: 200ms;
+  transition: 200ms;
+  color: #40abd9;
+  border-left: 2px solid #40abd9;
+  background: #ffffff;
 }
 
 #cssmenu ul ul li.has-sub > a:after {
@@ -404,11 +404,10 @@ button:focus, input:focus, a:focus, .btn:focus {
   height: 8px;
   background: #ffffff;
   content: '';
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  -webkit-transition: 400ms ease;
+  -moz-transition: 400ms ease;
+  -o-transition: 400ms ease;
+  transition: 400ms ease;
 }
 
 #cssmenu.align-right ul ul li.has-sub > a:before {
@@ -456,7 +455,7 @@ button:focus, input:focus, a:focus, .btn:focus {
   }
   #cssmenu ul ul li.active > a,
   #cssmenu ul ul li:hover > a {
-    color: #ffffff;
+    color: #40abd9;
   }
   #cssmenu ul ul,
   #cssmenu ul ul ul,
@@ -825,35 +824,10 @@ button:focus, input:focus, a:focus, .btn:focus {
     margin: 10px 0;
   }
   .header .header-right .form-search input {
-    width: 250px;
+    width: 80%;
   }
   .header .header-right .language {
     margin: 10px auto;
-  }
-  .nav .toggle-menu {
-    color: #ffffff;
-    padding: 10px;
-    cursor: pointer;
-    display: block;
-  }
-  .nav .content-nav {
-    display: none;
-  }
-  .nav .content-nav li {
-    width: 100%;
-  }
-  .nav .content-nav li a {
-    display: block;
-  }
-  .nav .content-nav li .sub {
-    display: block;
-    position: relative;
-    z-index: 10;
-    background: #3ba820;
-  }
-  .nav .content-nav li .sub li {
-    display: none;
-    width: 100%;
   }
   .content .section-banner img {
     width: 100%;
@@ -863,45 +837,5 @@ button:focus, input:focus, a:focus, .btn:focus {
 @media (min-width: 768px) and (max-width: 991px) {
   .header .header-right .language {
     text-align: right;
-  }
-  .nav .toggle-menu {
-    color: #ffffff;
-    padding: 10px;
-    cursor: pointer;
-    display: block;
-  }
-  .nav .content-nav {
-    display: none;
-  }
-  .nav .content-nav li {
-    width: 50%;
-  }
-  .nav .content-nav li a {
-    display: block;
-  }
-  .nav .content-nav li .sub {
-    display: block;
-    position: relative;
-    z-index: 10;
-    background: #3ba820;
-  }
-  .nav .content-nav li .sub li {
-    display: none;
-    width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .nav .toggle-menu {
-    display: none;
-  }
-  .nav #cssmenu > ul > li.has-sub > a:after {
-    background: transparent;
-  }
-  .nav #cssmenu > ul > li.has-sub > a:before {
-    background: transparent;
-  }
-  .nav .content-nav {
-    display: block !important;
   }
 }
