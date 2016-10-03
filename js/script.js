@@ -13,9 +13,9 @@
                 $(this).toggleClass('menu-opened');
                 var mainmenu = $(this).next('ul');
                 if (mainmenu.hasClass('open')) {
-                    mainmenu.hide().removeClass('open');
+                    mainmenu.hide('400').removeClass('open');
                 } else {
-                    mainmenu.show().addClass('open');
+                    mainmenu.show('400').addClass('open');
                     if (settings.format === "dropdown") {
                         mainmenu.find('ul').show();
                     }
@@ -54,15 +54,6 @@
     };
 })(jQuery);
 $(document).ready(function() {
-    // Menu responsive
-    // $('.toggle-menu').click(function() {
-    //     $('.content-nav').slideToggle(400);
-    // });
-    // $('.sub-item').hover(function(e) {
-    //     e.preventdefault();
-    //     $(this).find('.sub li').show();
-    // })
-
     // Tab
     $('.tab').hide();
     $('.tab:first').show();
@@ -74,9 +65,12 @@ $(document).ready(function() {
         var url = $(this).attr("data-tab");
         $(url).fadeIn();
     });
-
+    // Menu responsive
     $("#cssmenu").menumaker({
         title: "Menu",
         format: "multitoggle"
     });
+    $('#myCarousel-vacxin, #myCarousel-duocpham, #myCarousel-tpcn, #myCarousel-mypham').carousel({
+	    interval: 4000
+	})
 });

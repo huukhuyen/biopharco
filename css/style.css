@@ -1,10 +1,9 @@
-html, body, div, span, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+html, body, div, span,
 a, abbr, address,
-del, em, img, small, strong, b, u, i, hr,
-dl, dt, dd, ol, ul, li,
+del, em, img, small, strong, b, u, i,
+dl, dt, dd,
 fieldset, form, label, legend,
-table, tr, th, td,
+table,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
@@ -20,10 +19,6 @@ time, mark, audio, video {
 
 html {
   line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
 }
 
 table {
@@ -139,7 +134,7 @@ button:focus, input:focus, a:focus, .btn:focus {
 .title-section {
   text-transform: uppercase;
   text-align: center;
-  font-size: 20px;
+  font-size: 20px !important;
 }
 
 .title-section h1 {
@@ -147,7 +142,7 @@ button:focus, input:focus, a:focus, .btn:focus {
 }
 
 .title-section h2 {
-  padding: 20px;
+  padding: 20px !important;
   color: #000000;
 }
 
@@ -189,7 +184,6 @@ button:focus, input:focus, a:focus, .btn:focus {
 
 .nav {
   background: #3ba820;
-  padding: 2px;
 }
 
 .nav .content-nav {
@@ -203,19 +197,28 @@ button:focus, input:focus, a:focus, .btn:focus {
 }
 
 .nav .content-nav > li a {
+  border: 2px solid transparent !important;
   font-family: 'iCielEffra';
   display: block;
   color: #ffffff;
   padding: 20px;
 }
 
-.nav .content-nav > li.active {
+.nav .content-nav > li a:hover {
   border: 2px solid #ffffff !important;
+}
+
+.nav .content-nav > li.active {
+  border: 2px solid #40abd9 !important;
   background: #40abd9;
 }
 
-.nav .content-nav > li:hover {
+.nav .content-nav > li.active a {
   border: 2px solid #ffffff !important;
+}
+
+.nav .content-nav > li:hover {
+  border: 2px solid #40abd9 !important;
   background: #40abd9;
   -webkit-transition: 600ms;
   -moz-transition: 600ms;
@@ -279,7 +282,7 @@ button:focus, input:focus, a:focus, .btn:focus {
 }
 
 #cssmenu > ul > li > a {
-  padding: 17px;
+  padding: 12px 18px;
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
@@ -366,6 +369,7 @@ button:focus, input:focus, a:focus, .btn:focus {
   width: 170px;
   color: #ffffff;
   background: #3ba820;
+  text-transform: none;
 }
 
 #cssmenu ul ul li a:hover,
@@ -375,7 +379,8 @@ button:focus, input:focus, a:focus, .btn:focus {
   -o-transition: 200ms;
   transition: 200ms;
   color: #40abd9;
-  border-left: 2px solid #40abd9;
+  border-top: none !important;
+  border-left: 4px solid #40abd9 !important;
   background: #ffffff;
 }
 
@@ -583,6 +588,19 @@ button:focus, input:focus, a:focus, .btn:focus {
   color: #ffffff;
 }
 
+.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6, .footer p, .footer ol, .footer ul, .footer li {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  word-wrap: break-word;
+}
+
+.footer ol, .footer ul {
+  list-style: none;
+}
+
 .footer .title {
   padding: 10px 0;
   text-transform: uppercase;
@@ -722,6 +740,19 @@ button:focus, input:focus, a:focus, .btn:focus {
   background: #f3f3f3;
 }
 
+.content .section-about h1, .content .section-about h2, .content .section-about h3, .content .section-about h4, .content .section-about h5, .content .section-about h6, .content .section-about p, .content .section-about ol, .content .section-about ul, .content .section-about li {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  word-wrap: break-word;
+}
+
+.content .section-about ol, .content .section-about ul {
+  list-style: none;
+}
+
 .content .section-about h1 {
   font-size: 20px;
   color: #3ba820;
@@ -733,6 +764,19 @@ button:focus, input:focus, a:focus, .btn:focus {
 .content .section-about p {
   text-align: justify;
   line-height: 28px;
+}
+
+.content .section-products h1, .content .section-products h2, .content .section-products h3, .content .section-products h4, .content .section-products h5, .content .section-products h6, .content .section-products p, .content .section-products ol, .content .section-products ul, .content .section-products li {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  word-wrap: break-word;
+}
+
+.content .section-products ol, .content .section-products ul {
+  list-style: none;
 }
 
 .content .section-products .category-pr-h2 {
@@ -779,6 +823,19 @@ button:focus, input:focus, a:focus, .btn:focus {
   float: left;
 }
 
+.content .section-news h1, .content .section-news h2, .content .section-news h3, .content .section-news h4, .content .section-news h5, .content .section-news h6, .content .section-news p, .content .section-news ol, .content .section-news ul, .content .section-news li {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  word-wrap: break-word;
+}
+
+.content .section-news ol, .content .section-news ul {
+  list-style: none;
+}
+
 .content .section-news img {
   border: 1px solid #dbdbdb;
 }
@@ -804,6 +861,19 @@ button:focus, input:focus, a:focus, .btn:focus {
 .content .section-nav-bottom {
   background: #f3f3f3;
   padding: 15px 0;
+}
+
+.content .section-nav-bottom h1, .content .section-nav-bottom h2, .content .section-nav-bottom h3, .content .section-nav-bottom h4, .content .section-nav-bottom h5, .content .section-nav-bottom h6, .content .section-nav-bottom p, .content .section-nav-bottom ol, .content .section-nav-bottom ul, .content .section-nav-bottom li {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  word-wrap: break-word;
+}
+
+.content .section-nav-bottom ol, .content .section-nav-bottom ul {
+  list-style: none;
 }
 
 .content .section-nav-bottom p {
