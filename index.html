@@ -76,21 +76,21 @@
             <div class="container">
                 <div id='cssmenu'>
                 	<ul class="content-nav">
-                        <li class="active"><a href="">Trang chủ</a></li>
+                        <li class="active"><a href="index.html">Trang chủ</a></li>
                         <li><a href="">Giới thiệu</a></li>
-                        <li><a href="">Sản phẩm</a></li>
-                        <li><a href="">Thông tin cổ đông</a></li>
-                        <li><a href="">Hệ thống phân phối</a></li>
-                        <li><a href="">Hợp tác quốc tế</a></li>
-                        <li><a href="#">Tin tức - sự kiện</a>
+                        <li><a href="list-product.html">Sản phẩm</a></li>
+                        <li><a href="list-news.html">Thông tin cổ đông</a></li>
+                        <li><a href="list-news.html">Hệ thống phân phối</a></li>
+                        <li><a href="list-news.html">Hợp tác quốc tế</a></li>
+                        <li><a href="list-news.html">Tin tức - sự kiện</a>
                             <ul>
-                                <li><a href="#sub1">sub 1</a></li>
-                                <li><a href="#sub2">sub 2</a></li>
-                                <li><a href="#sub3">sub 3</a></li>
-                                <li><a href="#sub4">sub 4</a></li>
+                                <li><a href="detail-news.html">sub 1</a></li>
+                                <li><a href="detail-news.html">sub 2</a></li>
+                                <li><a href="detail-news.html">sub 3</a></li>
+                                <li><a href="detail-news.html">sub 4</a></li>
                             </ul>
                         </li>
-                        <li><a href="">Liên hệ</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
                 	</ul>
                 </div>
             </div>
@@ -98,6 +98,7 @@
 
         <!-- Body -->
         <div class="content">
+            <!-- slider -->
             <section class="section-slide">
                 <div class="container">
                     <div class="row">
@@ -130,6 +131,7 @@
                     </div>
                 </div>
             </section>
+            <!-- gioi thieu -->
             <section class="section-about">
                 <div class="container">
                     <div class="title-section">
@@ -140,15 +142,18 @@
                     <p>Nghị quyết Đại hội cổ đông lần đầu ngày 20/08/2016 của <span class="primary-text">CÔNG TY CỔ PHẦN VẮC XIN VÀ SINH PHẨM NHA TRANG.</span></p>
                 </div>
             </section>
+            <!-- product -->
             <section class="section-products">
                 <div class="container">
                     <div class="row">
                         <div class="title-section">
                             <h2>Sản phẩm</h2>
                         </div>
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <h2 class="category-pr-h2">Danh mục sản phẩm</h2>
+                        <div class="col-md-2 col-sm-4 col-xs-12 tab-control">
                             <ul class="list-pr">
+                                <li data-tab="#productlist" id="not-active">
+                                    <h2 class="category-pr-h2">Danh mục sản phẩm</h2>
+                                </li>
                                 <li data-tab="#vacxin">Vacxin - Huyết thanh</li>
                                 <li data-tab="#duocpham">Dược phẩm</li>
                                 <li data-tab="#tpcn">Thực phẩm chức năng</li>
@@ -158,6 +163,21 @@
                         <div class="col-md-10 col-sm-8 col-xs-12 list-product">
                             <div class="row">
                                 <!-- Tab 1 -->
+                                <div class="tab" id="productlist">
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <a href="#"><img class="img-responsive" src="images/product1.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <a href="#"><img class="img-responsive" src="images/product2.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <a href="#"><img class="img-responsive" src="images/product3.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <a href="#"><img class="img-responsive" src="images/product4.jpg" alt="" /></a>
+                                    </div>
+                                </div>
+                                <!-- Tab 2 -->
                                 <div class="tab" id="vacxin">
                                     <div id="myCarousel-vacxin" class="carousel slide">
                                         <div class="carousel-inner">
@@ -194,7 +214,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Tab 2 -->
+                                <!-- Tab 3 -->
                                 <div class="tab" id="duocpham">
                                     <div id="myCarousel-duocpham" class="carousel slide">
                                         <div class="carousel-inner">
@@ -231,7 +251,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Tab 3 -->
+                                <!-- Tab 4 -->
                                 <div class="tab" id="tpcn">
                                     <div id="myCarousel-tpcn" class="carousel slide">
                                         <div class="carousel-inner">
@@ -268,7 +288,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Tab 4 -->
+                                <!-- Tab 5 -->
                                 <div class="tab" id="mypham">
                                     <div id="myCarousel-mypham" class="carousel slide">
                                         <div class="carousel-inner">
@@ -310,12 +330,14 @@
                     </div>
                 </div>
             </section>
+            <!-- banner -->
             <section class="section-banner">
                 <div class="container">
                     <a href=""><img class="img-responsive" src="images/banner-qc-1.png" alt="" /></a>
                     <a href=""><img class="img-responsive" src="images/banner-qc-2.png" alt="" /></a>
                 </div>
             </section>
+            <!-- tin tuc -->
             <section class="section-news">
                 <div class="container">
                     <div class="title-section">
@@ -348,6 +370,7 @@
                     </div>
                 </div>
             </section>
+            <!-- nav bottom -->
             <section class="section-nav-bottom hidden-xs">
                 <div class="container">
                     <p>

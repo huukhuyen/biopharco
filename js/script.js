@@ -57,10 +57,10 @@ $(document).ready(function() {
     // Tab
     $('.tab').hide();
     $('.tab:first').show();
-    $('.list-pr li:first').addClass('active');
-    $('.list-pr li').click(function() {
+    $('.tab-control li:first').addClass('active');
+    $('.tab-control li').click(function() {
         $('.tab').hide();
-        $('.list-pr li').removeClass();
+        $('.tab-control li').removeClass();
         $(this).addClass('active');
         var url = $(this).attr("data-tab");
         $(url).fadeIn();

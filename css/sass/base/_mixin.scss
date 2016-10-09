@@ -1,0 +1,47 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin box-sizing($type: border-box) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    -o-box-sizing: $type;
+    box-sizing: $type;
+}
+@mixin box-shadow($string) {
+    -webkit-box-shadow: $string;
+    -moz-box-shadow: $string;
+    -o-box-shadow: $string;
+    box-shadow: $string;
+}
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+$mobile-width: 768px;
+$tablet-width: 992px;
+$desktop-width: 1200px;
+@mixin xs {
+     @media only screen and (max-width: #{$mobile-width}){
+        @content;
+    }
+}
+@mixin sm {
+     @media only screen and (min-width: #{$mobile-width + 1px}) and (max-width: #{$tablet-width - 1px}){
+        @content;
+    }
+}
+@mixin md {
+     @media only screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}){
+        @content;
+    }
+}
+@mixin lg {
+     @media only screen and (min-width: #{$desktop-width}){
+        @content;
+    }
+}
